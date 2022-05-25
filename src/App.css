@@ -1,0 +1,24 @@
+.app-wrapper {
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  grid-template-areas: "h h h" "n c c" "f f f";
+  grid-template-rows: 36px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 5px;
+}
+
+.app-wrapper-content {
+  grid-area: c;
+  background-color: #1f91a5af;
+  border: 4px solid #1a7281af;
+  border-radius: 10px;
+  height: 1000px;
+}
+
+@media (max-width: 700px) {
+  .app-wrapper {
+    grid-template-areas: "h h h" "n n n" "c c c" "f f f";
+    grid-template-columns: 12fr;
+  }
+}

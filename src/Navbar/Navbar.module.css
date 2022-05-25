@@ -1,0 +1,54 @@
+.nav {
+    grid-area: n;
+}
+
+.navbar {
+    background-color: blueviolet;
+    border: 4px solid rgb(106, 0, 206);
+    border-radius: 10px;
+    height: 1000px;
+}
+
+.searchArea {
+    display: none;
+}
+
+.navigation {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.imact {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.imact:hover {
+    background-color: beige;
+}
+
+
+
+@media (max-width: 700px) {
+    .navbar {
+        height: 100px;
+        width: 100%;
+        padding-right: 2px;
+    }
+    .searchArea {
+        display: flex;
+    }
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+    }
+    .imact:hover {
+        padding-top: 15px;
+        background-color: beige;
+    }
+    .imact:active {
+        background-color: beige;
+    }
+}
