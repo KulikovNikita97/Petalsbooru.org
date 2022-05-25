@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Navbar.module.css'
+import {Link } from 'react-router-dom'
 
 const Navbar = () => {
     return <div>
@@ -21,9 +22,9 @@ const Navbar = () => {
             </div>
             <div className={s.navigation}>
                 <div className={s.imact}>
-                    <a href='#'>
-                        Images
-                    </a>
+
+                    <Link to="/images">IMAGES</Link>
+
                 </div>
                 <div className={s.imact}>
                     <a href='#'>

@@ -1,11 +1,11 @@
-import { combineReducers, configureStore } from "redux";
+import { combineReducers, createStore } from "redux";
 import imagesReducer from "./imagesReducer";
 
 let reducers = combineReducers({
     imagesPage: imagesReducer,
 });
 
-let store = configureStore(reducers);
+let store = createStore(reducers);
 
 window.store = store;
 

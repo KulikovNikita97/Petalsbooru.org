@@ -3,7 +3,7 @@ import React from 'react';
 import s from './Images.module.css'
 
 const Images = (props) => {
-
+debugger
     if (props.images.length === 0) {
 
         axios.get('https://derpibooru.org/api/v1/json/images')
@@ -14,7 +14,7 @@ const Images = (props) => {
     }
 
     return <div>
-        
+        w
         {
             props.images.map(
                 image =>
