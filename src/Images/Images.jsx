@@ -14,7 +14,7 @@ debugger
     }
 
     return <div>
-        w
+        JENNA-TEST
         {
             props.images.map(
                 image =>
