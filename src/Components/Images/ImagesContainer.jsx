@@ -1,7 +1,7 @@
 import React from 'react';
 import Images from './Images';
 import { connect } from 'react-redux';
-import { setImagesAC } from '../redux/imagesReducer';
+import { setImagesAC } from '../../redux/imagesReducer';
 
 let mapStateToProps = (state) => {
     return {

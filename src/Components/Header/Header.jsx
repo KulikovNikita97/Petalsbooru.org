@@ -6,7 +6,7 @@ const Header = (props) => {
     return <header className={s.header}>
 
         <nav className={s.leftSide}>
-            <a href='#'>
+            <a href='/'>
                 <img src={jennaImage} alt="" />
                 <button className={s.jennabooru}>
                     JENNABOORU

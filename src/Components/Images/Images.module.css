@@ -1,0 +1,55 @@
+.imageboard {
+    padding: 10px;
+}
+
+.imageboard img {
+    height: 200px;
+}
+
+.imageboard button {
+    width: 40px;
+    height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image {
+    position: relative;
+    text-align: center;
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.score {
+    padding: 10px;
+}
+
+.count_and_image {
+    border: 2px solid rgba(26, 114, 129, 0.959);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.main_title {
+    font-family: cursive;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.button_faves {
+    background-color: rgb(255, 174, 0);
+}
+
+.button_upvotes {
+    background-color: rgb(153, 224, 46)
+}
+
+.button_downvotes {
+    background-color: rgb(255, 158, 174)
+}

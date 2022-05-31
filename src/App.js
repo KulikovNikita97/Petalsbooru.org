@@ -1,10 +1,10 @@
 import React from 'react';
 import { Outlet } from "react-router-dom";
 import './App.css';
-import Header from './Header/Header';
-import Navbar from './Navbar/Navbar';
-import Footer from './Footer/Footer';
-import ImagesContainer from './Images/ImagesContainer';
+import Header from './Components/Header/Header';
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
+import ImagesContainer from './Components/Images/ImagesContainer';
 
 const App = () => {
   return (

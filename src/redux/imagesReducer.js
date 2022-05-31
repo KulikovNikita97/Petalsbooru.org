@@ -6,6 +6,7 @@ let initialState = {
 
 const imagesReducer = (state = initialState, action) => {
     switch (action.type) {
+        
         case SET_IMAGES:
             return { ...state, images: [...state.images, ...action.images] }
 
@@ -15,6 +16,6 @@ const imagesReducer = (state = initialState, action) => {
 
 }
 
-export const setImagesAC = (image) => ({ type: SET_IMAGES, image })
+export const setImagesAC = (images) => ({ type: SET_IMAGES, images })
 
 export default imagesReducer;
