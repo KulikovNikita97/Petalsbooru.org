@@ -1,27 +1,60 @@
 import * as axios from 'axios';
 import React from 'react';
 import s from './Images.module.css';
-import { Image } from './Image';
 
-const Images = (props) => {
+class Images extends React.Component {
 
-    if (props.images.length === 0) {
+    componentDidMount() {
 
-        axios.get('https://derpibooru.org/api/v1/json/search/images?q=safe')
+        axios.get(`https://derpibooru.org/api/v1/json/search/images?q=safe&page=${this.props.currentPage}&per_page=${this.props.pageSize}`)
             .then(response => {
-                props.setImages(response.data.images);
+                this.props.setImages(response.data.images);
+                // this.props.setTotalImages(response.data.total);
+                //отвечает за показ всех страниц
             })
     }
 
-    return <div>
+    onPageChanged = (pageNumber) => {
+        this.props.setCurrentPage(pageNumber);
+        axios.get(`https://derpibooru.org/api/v1/json/search/images?q=safe&page=${pageNumber}&per_page=${this.props.pageSize}`)
+        .then(response => {
+            this.props.setImages(response.data.images);
+        }) 
+    }
+    
 
-        <div className={s.main_title}>
-            Recently added:
-        </div>
+    render() {
 
-        <div className={s.imageboard}>
-            {
-                props.images.map(q =>
+        let pagesCount = Math.ceil(this.props.totalImagesCount / this.props.pageSize);
+
+        let pages = [];
+        for (let i = 1; i <= pagesCount; i++) {
+            pages.push(i);
+        }
+
+        return <div>
+
+            <div className={s.main_title}>
+                Recently added:
+            </div>
+
+            <div>
+                {pages.map(p => {
+                    return (
+                        <span className={this.props.currentPage === p && s.selectedPage}
+                            onClick={(e) => { this.onPageChanged(p)}}>
+                            {p}
+                        </span>
+                    )
+                })}
+            </div>
+
+
+
+            <div className={s.imageboard}>
+
+                {this.props.images.map(q =>
+
                     <div key={q}
                         className={s.count_and_image}>
 
@@ -52,11 +85,10 @@ const Images = (props) => {
                         </div>
 
                     </div>
-                )
-            }
+                )}
+            </div>
         </div>
-    </div>
+    }
 }
-
 
 export default Images;
