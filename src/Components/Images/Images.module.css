@@ -3,7 +3,7 @@
 }
 
 .imageboard img {
-    height: 200px;
+
 }
 
 .imageboard button {
@@ -38,8 +38,7 @@
 .main_title {
     font-family: cursive;
     font-size: 30px;
-    padding-left: 10px;
-    padding-top: 5px;
+    padding: 5px 0 0 10px;
 }
 
 .button_faves {
@@ -56,4 +55,11 @@
 
 .selectedPage {
     font-weight: bold;
+    cursor: pointer;
+}
+
+.paginator {
+    position: relative;
+    text-align: center;
+    margin: 10px 10px 0 10px;
 }

@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className={s.footer}>
             <div className={s.siteTitle}>
-                JENNABOORU.org
+                PETALSBOORU.org
             </div>
         </footer>
     )

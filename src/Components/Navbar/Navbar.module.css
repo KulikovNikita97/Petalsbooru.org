@@ -15,17 +15,14 @@
 
 .navigation {
     width: 100%;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 0;
 }
 
-.imact {
-    padding-top: 5px;
-    padding-right: 10px;
-    padding-bottom: 5px;
+.menuImages:hover {
+    background-color: beige;
 }
 
-.imact:hover {
+.menuFeedback:hover {
     background-color: beige;
 }
 
@@ -33,22 +30,19 @@
 
 @media (max-width: 700px) {
     .navbar {
-        height: 100px;
-        width: 100%;
-        padding-right: 2px;
+        height: 38px;
+        min-width: 100%;
     }
+
     .searchArea {
         display: flex;
+        height: 30px;
+        padding: 0 0 0 20px;
     }
+
     .navigation {
         display: flex;
-        justify-content: space-around;
-    }
-    .imact:hover {
-        padding-top: 15px;
-        background-color: beige;
-    }
-    .imact:active {
-        background-color: beige;
+        align-items: center;
+        justify-content: space-evenly;
     }
 }

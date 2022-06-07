@@ -4,8 +4,8 @@ const SET_TOTAL_IMAGES = 'SET_TOTAL_IMAGES';
 
 let initialState = {
     images: [],
-    pageSize: 10,
-    totalImagesCount: 20, //должно быть 0, чтобы все страницы рендерились
+    pageSize: 20,
+    totalImagesCount: 0,
     currentPage: 1
 }
 
@@ -20,7 +20,6 @@ const imagesReducer = (state = initialState, action) => {
 
         case SET_TOTAL_IMAGES:
             return { ...state, totalImagesCount: action.totalImagesCount }
-            //отвечает за рендер номеров всех страниц
 
         default:
             return state;

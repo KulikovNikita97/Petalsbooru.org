@@ -1,6 +1,8 @@
-import * as axios from 'axios';
 import React from 'react';
+import * as axios from 'axios';
 import s from './Images.module.css';
+import 'antd/dist/antd.css';
+import { Pagination } from 'antd';
 
 class Images extends React.Component {
 
@@ -9,28 +11,20 @@ class Images extends React.Component {
         axios.get(`https://derpibooru.org/api/v1/json/search/images?q=safe&page=${this.props.currentPage}&per_page=${this.props.pageSize}`)
             .then(response => {
                 this.props.setImages(response.data.images);
-                // this.props.setTotalImages(response.data.total);
-                //отвечает за показ всех страниц
+                this.props.setTotalImages(response.data.total);
             })
     }
 
     onPageChanged = (pageNumber) => {
         this.props.setCurrentPage(pageNumber);
         axios.get(`https://derpibooru.org/api/v1/json/search/images?q=safe&page=${pageNumber}&per_page=${this.props.pageSize}`)
-        .then(response => {
-            this.props.setImages(response.data.images);
-        }) 
+            .then(response => {
+                this.props.setImages(response.data.images);
+            })
     }
-    
+
 
     render() {
-
-        let pagesCount = Math.ceil(this.props.totalImagesCount / this.props.pageSize);
-
-        let pages = [];
-        for (let i = 1; i <= pagesCount; i++) {
-            pages.push(i);
-        }
 
         return <div>
 
@@ -38,18 +32,9 @@ class Images extends React.Component {
                 Recently added:
             </div>
 
-            <div>
-                {pages.map(p => {
-                    return (
-                        <span className={this.props.currentPage === p && s.selectedPage}
-                            onClick={(e) => { this.onPageChanged(p)}}>
-                            {p}
-                        </span>
-                    )
-                })}
+            <div className={s.paginator}>
+                <Pagination defaultCurrent={1} total={this.props.totalImagesCount} onChange={this.onPageChanged} />
             </div>
-
-
 
             <div className={s.imageboard}>
 

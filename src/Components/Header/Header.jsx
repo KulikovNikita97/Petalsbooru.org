@@ -1,15 +1,15 @@
 import React from "react";
 import s from './Header.module.css'
-import jennaImage from './Jenna.jpg';
+import Image from './petals2.jpeg';
 
 const Header = (props) => {
     return <header className={s.header}>
 
         <nav className={s.leftSide}>
             <a href='/'>
-                <img src={jennaImage} alt="" />
+                <img src={Image} alt="" />
                 <button className={s.jennabooru}>
-                    JENNABOORU
+                    PETALSBOORU
                 </button>
             </a>
             <div className={s.searchArea}>
