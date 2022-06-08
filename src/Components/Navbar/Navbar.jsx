@@ -22,14 +22,14 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className={s.navigation}>
+            {/* <div className={s.navigation}>
                 <div className={s.menuImages}>
                     <Link to="/images">IMAGES</Link>
                 </div>
                 <div className={s.menuFeedback}>
                     <Link to="/feedback">FEEDBACK</Link>
                 </div>
-            </div>
+            </div> */}
         </nav>
     </div>
 

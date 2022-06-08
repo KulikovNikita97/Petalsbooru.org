@@ -6,7 +6,8 @@ let initialState = {
     images: [],
     pageSize: 20,
     totalImagesCount: 0,
-    currentPage: 1
+    currentPage: 1,
+    // isFetching: false //for preloader
 }
 
 const imagesReducer = (state = initialState, action) => {
@@ -24,7 +25,6 @@ const imagesReducer = (state = initialState, action) => {
         default:
             return state;
     }
-
 }
 
 export const setImagesAC = (images) => ({ type: SET_IMAGES, images })

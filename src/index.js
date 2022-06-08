@@ -18,7 +18,7 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} >
-        <Route path="/images" element={<ImagesContainer />} /> 
+        <Route path="/" element={<ImagesContainer />} /> 
       </Route>
     </Routes>
   </BrowserRouter>
