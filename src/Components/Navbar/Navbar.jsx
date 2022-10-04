@@ -6,7 +6,7 @@ const Navbar = () => {
     return <div>
         <nav className={s.navbar}>
 
-            <div className={s.searchArea}>
+            {/* <div className={s.searchArea}>
                 <div>
                     <textarea placeHolder='Search'></textarea>
                 </div>
@@ -20,14 +20,14 @@ const Navbar = () => {
                         Upload
                     </button>
                 </div>
-            </div>
+            </div> */}
 
             {/* <div className={s.navigation}>
                 <div className={s.menuImages}>
                     <Link to="/images">IMAGES</Link>
                 </div>
                 <div className={s.menuFeedback}>
-                    <Link to="/feedback">FEEDBACK</Link>
+                    <Link to="/image">IMAGE</Link>
                 </div>
             </div> */}
         </nav>

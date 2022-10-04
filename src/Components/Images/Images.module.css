@@ -14,7 +14,7 @@
 
 .image {
     position: relative;
-    text-align: center;
+    align-items: center;
 }
 
 .count {
@@ -59,6 +59,12 @@
 }
 
 .paginator {
+    position: relative;
+    text-align: center;
+    margin: 10px 10px 0 10px;
+}
+
+.profile {
     position: relative;
     text-align: center;
     margin: 10px 10px 0 10px;

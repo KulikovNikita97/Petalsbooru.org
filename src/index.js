@@ -1,5 +1,4 @@
 import store from "./redux/redux-store"
-import ImagesContainer from './Components/Images/ImagesContainer';
 import React from 'react';
 import './index.css';
 import { render } from "react-dom";
@@ -11,17 +10,20 @@ import {
 import App from "./App";
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
+import ImagesContainer from './Components/Images/ImagesContainer';
+import ProfileContainer from './Components/Images/Profile/ProfileContainer'
 
 const rootElement = document.getElementById("root");
 render(
   <Provider store={store}>
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} >
-        <Route path="/" element={<ImagesContainer />} /> 
-      </Route>
-    </Routes>
-  </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} >
+          <Route path="/" element={<ImagesContainer />} />
+          <Route path="/images" element={<ProfileContainer />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </Provider>,
   rootElement
 );

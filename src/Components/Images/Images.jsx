@@ -2,16 +2,21 @@ import React from 'react';
 import { Pagination } from 'antd';
 import 'antd/dist/antd.css';
 import s from './Images.module.css';
+import { NavLink } from 'react-router-dom';
 
 let Images = (props) => {
     return <div>
 
-        <div className={s.main_title}>
+        {/* <div className={s.main_title}>
             Recently added:
-        </div>
+        </div> */}
 
         <div className={s.paginator}>
-            <Pagination defaultCurrent={1} total={props.totalImagesCount} onChange={props.onPageChanged} />
+            <Pagination
+                defaultCurrent={1}
+                total={props.totalImagesCount}
+                onChange={props.onPageChanged}
+            />
         </div>
 
         <div className={s.imageboard}>
@@ -42,9 +47,9 @@ let Images = (props) => {
                     </div>
 
                     <div className={s.image}>
-
-                        <img src={q.representations.small} />
-
+                        <NavLink to={'/images/' + q.id}>
+                            <img src={q.representations.small} />
+                        </NavLink>
                     </div>
 
                 </div>
