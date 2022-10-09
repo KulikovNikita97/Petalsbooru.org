@@ -5,6 +5,7 @@ import s from './Images.module.css';
 import { NavLink } from 'react-router-dom';
 
 let Images = (props) => {
+    
     return <div>
 
         {/* <div className={s.main_title}>
@@ -47,7 +48,8 @@ let Images = (props) => {
                     </div>
 
                     <div className={s.image}>
-                        <NavLink to={'/images/' + q.id}>
+                        <NavLink to={`/image/${q.id}`}
+                            onClick={() => { localStorage.setItem('id', q.id) }}>
                             <img src={q.representations.small} />
                         </NavLink>
                     </div>

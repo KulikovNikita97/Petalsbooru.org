@@ -20,7 +20,7 @@ render(
       <Routes>
         <Route path="/" element={<App />} >
           <Route path="/" element={<ImagesContainer />} />
-          <Route path="/images" element={<ProfileContainer />} />
+          <Route path="/image/:id" element={<ProfileContainer />} />
         </Route>
       </Routes>
     </BrowserRouter>

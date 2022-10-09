@@ -11,6 +11,7 @@ let initialState = {
     isFetching: false //for preloader
 }
 
+
 const imagesReducer = (state = initialState, action) => {
     switch (action.type) {
 

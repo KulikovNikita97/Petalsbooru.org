@@ -5,9 +5,10 @@ import { setImageProfile } from '../../../redux/profileReducer';
 import Profile from './Profile';
 
 
+
 class ProfileContainer extends React.Component {
     componentDidMount() {
-        axios.get(`https://derpibooru.org/api/v1/json/images/`)
+        axios.get(`https://derpibooru.org/api/v1/json/images/${localStorage.getItem('id')}`)
             .then(response => {
                 this.props.setImageProfile(response.data);
             })
@@ -15,7 +16,6 @@ class ProfileContainer extends React.Component {
 
 
     render() {
-
         return <div>
             <Profile {...this.props} images={this.props.images} />
         </div>
